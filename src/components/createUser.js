@@ -7,7 +7,11 @@ export default class createUser extends Component {
   };
 
   async componentDidMount() {
-    const res = await axios.get("http://localhost:5000/api/users");
+    const res = await fetch.get("https://pokeapi.co/api/v2/pokemon") .then(result=>result.json())
+        .then(items=>this.setState({
+            done: true,
+            items
+        }));
     this.setState({ users: res.data });
     console.log(this.state.users);
   }
@@ -41,9 +45,9 @@ export default class createUser extends Component {
             {this.state.users.map(users => (
               <li
                 className="list-group-item list-group-item-action"
-                key={users._id}
+                key={users.name}
               >
-                {users.username}
+                {users.name}
               </li>
             ))}
           </ul>
