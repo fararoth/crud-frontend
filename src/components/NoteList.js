@@ -1,28 +1,30 @@
 import React, { Component } from "react";
 
-const urlapi = 'https://jsonplaceholder.typicode.com/todos';
-
 export default class NoteList extends Component {
-  constructor() {
-        super();
-        this.state = { items: [] };
-    }
+  constructor(props) {
+    super(props);
+    this.state = { users: [] };
+  }
 
-    componentDidMount() {
-       fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(data => {
-         console.log(data);
-         this.setState({
-        users:data
+  componentWillMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => {
+        return response.json();
       })
-    })
-}
+      .then((users) => {
+        this.setState({ users: users });
+      });
+  }
 
-    render() {
-       return(
-<ul>
-    {this.state.users.map( item => <li>{users.id}</li>)}
-</ul>
-        )
+  render() {
+    if (this.state.users.length > 0) {
+      return (
+        <div className="container-fluid">
+          <EmpleadoList listado={this.state.users} />
+        </div>
+      );
+    } else {
+      return <p className="text-center">Cargando usuarios...</p>;
     }
+  }
+}
