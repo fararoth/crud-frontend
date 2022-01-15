@@ -7,8 +7,7 @@ export default class createUser extends Component {
   };
 
   async componentDidMount() {
-    const res = await fetch.get("https://pokeapi.co/api/v2/pokemon") .then(result=>result.json())
-        .then(items=>this.setState({
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon").then(result=>result.json()).then(items=>this.setState({
             done: true,
             items
         }));
