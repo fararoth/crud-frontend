@@ -9,9 +9,9 @@ export default class NoteList extends Component {
     }
 
     componentDidMount() {
-        fetch(urlapi).then(result=>result.json()).then(items=>this.setState({
-            done: true,
-            items }))
+       fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(json => console.log(json))
     }
 
     render() {
