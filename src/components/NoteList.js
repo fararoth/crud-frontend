@@ -25,13 +25,9 @@ export default class NoteList extends Component {
 
     render() {
        return(
-            <div>
-                {this.state.done && this.state.items.isArray() ? (
-                    <List items={...this.state.items} />
-                ) : (
-                    <p>Cargando resultados...</p>
-                )}
-            </div>
+<ul>
+    {this.state.items.map( item => <li>{item}</li>)}
+</ul>
         )
     }
 }
