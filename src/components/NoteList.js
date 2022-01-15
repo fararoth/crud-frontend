@@ -16,8 +16,8 @@ export default class NoteList extends Component {
          this.setState({
         users:data
       })
-    }
-        }
+    })
+}
 
     render() {
        return(
@@ -26,4 +26,3 @@ export default class NoteList extends Component {
 </ul>
         )
     }
-}
