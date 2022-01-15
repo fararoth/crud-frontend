@@ -11,13 +11,17 @@ export default class NoteList extends Component {
     componentDidMount() {
        fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
-  .then(json => console.log(json))
+  .then(data => {
+         console.log(data));
+         this.setState({
+        users:data
+      })
     }
 
     render() {
        return(
 <ul>
-    {this.state.items.map( item => <li>{item}</li>)}
+    {this.state.users.map( item => <li>{users.id}</li>)}
 </ul>
         )
     }
