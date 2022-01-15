@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+const urlapi = 'https://jsonplaceholder.typicode.com/todos';
+
 export default class NoteList extends Component {
   constructor() {
         super();
@@ -7,7 +9,7 @@ export default class NoteList extends Component {
     }
 
     componentDidMount() {
-        fetch('https://rickandmortyapi.com/api/character').then(result=>result.json()).then(items=>this.setState({
+        fetch(urlapi).then(result=>result.json()).then(items=>this.setState({
             done: true,
             items }))
     }
