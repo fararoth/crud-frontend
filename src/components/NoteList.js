@@ -20,7 +20,7 @@ export default class NoteList extends Component {
     if (this.state.users.length > 0) {
       return (
         <div className="container-fluid">
-          <EmpleadoList listado={this.state.users} />
+          <li>{this.state.users}</li>
         </div>
       );
     } else {
