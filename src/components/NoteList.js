@@ -17,6 +17,7 @@ export default class NoteList extends Component {
         users:data
       })
     }
+        }
 
     render() {
        return(
