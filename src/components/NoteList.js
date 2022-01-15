@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Table, Button } from 'reactstrap';
-import ModalForm from './src/components/modal.js';
+import ModalForm from './Modal';
 
 export default class list extends Component {
   deleteItem = (id) => {
