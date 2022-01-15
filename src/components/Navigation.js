@@ -24,17 +24,17 @@ export default class Navigation extends Component {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
                 <Link className="nav-link" to="/">
-                  Notes
+                  Main
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/create">
-                  Create Note
+                  Users
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/user">
-                  Create Users
+                  Products
                 </Link>
               </li>
             </ul>
